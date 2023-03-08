@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row d-flex justify-content-center mt-5">
+        <div class="col-md-6 text-center">
+            <mat-card>
+                <mat-card-content>
+                    <mat-list role="list" *ngFor="let items of getform">
+                        <mat-list-item role="listitem">First Name : {{items.firstname}}</mat-list-item>
+                        <mat-list-item role="listitem">Middle Name :{{items.middlename}}</mat-list-item>
+                        <mat-list-item role="listitem">Last Name :{{items.lastname}}</mat-list-item>
+                        <mat-list-item role="listitem">email :{{items.email}}</mat-list-item>
+                        <mat-list-item role="listitem">Phone number :{{items.phone}}</mat-list-item>
+                        <mat-list-item role="listitem">City :{{items.city}}</mat-list-item>
+                        <mat-list-item role="listitem">State :{{items.state}}</mat-list-item>
+                        <mat-list-item role="listitem">Zip :{{items.zip}}</mat-list-item>
+                        <mat-list-item role="listitem">ADD 1 :{{items.add1}}</mat-list-item>
+                        <mat-list-item role="listitem">ADD 2:{{items.add2}}</mat-list-item>
+                        <button type="submit" mat-raised-button class="mb-4"  color="accent" [routerLink]="['/viewpage']">Back</button>
+                    </mat-list>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

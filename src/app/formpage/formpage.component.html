@@ -1,0 +1,158 @@
+<div class="container ">
+    <div class="row d-flex justify-content-center mt-5">
+        <div class="col-md-6 mt-5">
+            <mat-card class="example-card">
+                <mat-card-header class="d-flex justify-content-center">
+                    <mat-card-title class="text-center">Sign-up From</mat-card-title>
+
+                </mat-card-header>
+                <mat-card-content class="d-flex justify-content-center">
+                    <form class="example-form text-center" (ngSubmit)="SaveData(f)" #f="ngForm">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <!-- #1 -->
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>First name</mat-label>
+                                    <input type="text" matInput placeholder="Ex. name" name="firstname" [(ngModel)]="formObj.firstname" required>
+                                    <mat-error
+                                        *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                                        Please enter a valid First Name
+                                    </mat-error>
+                                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                                        First Name is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                                <!-- #2 -->
+
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Middle Name </mat-label>
+                                    <input type="text" matInput placeholder="Ex. Middle" name="middlename"
+                                        [(ngModel)]="formObj.middlename">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                                <!-- #2 -->
+
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Last Name </mat-label>
+                                    <input type="text" matInput placeholder="Ex. LastName" required name="lastname" [(ngModel)]="formObj.lastname" >
+                                    <mat-error
+                                        *ngIf="emailFormControl.hasError('lastname') && !emailFormControl.hasError('required')">
+                                        Please enter a valid Last Name
+                                    </mat-error>
+                                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                                        Last Name is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- #3 -->
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Email</mat-label>
+                                    <input type="email" matInput placeholder="Ex. pat@example.com" required name="email" [(ngModel)]="formObj.email" >
+                                    <mat-error
+                                        *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                                        Please enter a valid email address
+                                    </mat-error>
+                                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                                        Email is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- #4 -->
+
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Phone number</mat-label>
+                                    <input type="number" matInput required name="phone" [(ngModel)]="formObj.phone" >
+                                    <mat-error
+                                        *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                                        Please enter a valid Phone Number
+                                    </mat-error>
+                                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                                        Phone Number is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <!-- #5 -->
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>City</mat-label>
+                                    <input type="text" matInput required name="city" [(ngModel)]="formObj.city" >
+                                    <mat-error
+                                        *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                                        Please enter a valid City
+                                    </mat-error>
+                                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                                        City is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                                <!-- #6 -->
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>State</mat-label>
+                                    <input type="text" matInput required name="state" [(ngModel)]="formObj.state" >
+                                    <mat-error
+                                        *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                                        Please enter a valid State
+                                    </mat-error>
+                                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                                        State is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                                <!-- #6 -->
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Zip</mat-label>
+                                    <input type="number" matInput required name="zip" [(ngModel)]="formObj.zip" >
+                                    <mat-error
+                                        *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                                        Please enter a valid Zip
+                                    </mat-error>
+                                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                                        Zip is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <!-- #9 -->
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Address1</mat-label>
+                            <input type="text" matInput required name="add1" [(ngModel)]="formObj.add1" >
+                            <mat-error
+                                *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                                Please enter a valid Address
+                            </mat-error>
+                            <mat-error *ngIf="emailFormControl.hasError('required')">
+                                Address is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+
+                        <!-- #10 -->
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Address2</mat-label>
+                            <input type="text" matInput name="add2" [(ngModel)]="formObj.add2">
+                        </mat-form-field>
+                    </form>
+                </mat-card-content>
+                <mat-card-actions class=" d-flex justify-content-center mb-4">
+                    <button mat-raised-button type="submit" class="text-center" (click)="SaveData(f)"
+                        color="primary">Submit</button>
+                    <button mat-raised-button type="reset" class="text-center" color="accent">Reset</button>
+
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+</div>

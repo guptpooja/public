@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12">
             <button type="submit" mat-raised-button class="mb-4"  color="accent" [routerLink]="['/formpage']">Home</button>
-            <table mat-table [dataSource]="viewform" class="mat-elevation-z8">
+            <table mat-table [dataSource]="viewData" class="mat-elevation-z8">
                 
                 <!-- Name Column -->
                 <ng-container matColumnDef="firstname">
@@ -20,7 +20,12 @@
                 <ng-container matColumnDef="lastname">
                     <th mat-header-cell *matHeaderCellDef>Last Name</th>
                     <td mat-cell *matCellDef="let element"> {{element.lastname}} </td>
-                   
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="Action">
+                    <th mat-header-cell *matHeaderCellDef>Action</th>
+                    <td mat-cell *matCellDef="let element;let i = index;"><button type="button" mat-raised-button (click)="deleteData(i)" class="mb-4" color="accent">Delete</button></td>
                 </ng-container>
                 
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
